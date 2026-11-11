@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: sqgs-grading-system
+    runtime: docker
+    plan: free
+    branch: main
+    dockerContext: .
+    dockerfilePath: Dockerfile
+    healthCheckPath: /login.php
+    envVars:
+      - key: DATABASE_URL
+        sync: false

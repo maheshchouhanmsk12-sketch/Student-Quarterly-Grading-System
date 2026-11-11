@@ -21,3 +21,4 @@ EXPOSE 80
 
 # Configure Apache port dynamically based on Render's $PORT env variable and start Apache
 CMD ["sh", "-c", "sed -i \"s/Listen [0-9]*/Listen ${PORT:-80}/\" /etc/apache2/ports.conf && sed -i \"s/<VirtualHost \\*:[0-9]*>/<VirtualHost \\*:${PORT:-80}>/\" /etc/apache2/sites-available/000-default.conf && exec apache2-foreground"]
+

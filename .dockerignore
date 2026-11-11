@@ -1,0 +1,5 @@
+.git
+.gitignore
+*.bak
+*.original.php
+.system_generated

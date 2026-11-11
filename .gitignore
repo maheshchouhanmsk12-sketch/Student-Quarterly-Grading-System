@@ -1,0 +1,5 @@
+*.bak
+*.original.php
+.env
+.system_generated/
+*.log
